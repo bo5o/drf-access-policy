@@ -111,7 +111,8 @@ TIME_ZONE = "UTC"
 
 USE_I18N = True
 
-USE_L10N = True
+if Version(django.__version__) < Version("4.0"):
+    USE_L10N = True
 
 USE_TZ = True
 
